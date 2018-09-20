@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1537481679 source:c:\users\dr.zero\desktop\mls4d\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1532928262 c:\users\dr.zero\desktop\mls4d\arraylist.h
+
+1537473022 source:c:\users\dr.zero\desktop\mls4d\contratista.c
+	<stdio.h>
+	"Contratista.h"
+
+1537473591 c:\users\dr.zero\desktop\mls4d\contratista.h
+	"Funciones.h"
+
+1537473510 c:\users\dr.zero\desktop\mls4d\funciones.h
+
+1537473523 source:c:\users\dr.zero\desktop\mls4d\funciones.c
+	<stdio.h>
+	"Funciones.h"
+	<ctype.h>
+
+1537481003 source:c:\users\dr.zero\desktop\mls4d\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Tarea.h"
+	"Obra.h"
+	"Contratista.h"
+
+1537481514 c:\users\dr.zero\desktop\mls4d\tarea.h
+	"Funciones.h"
+	"Obra.h"
+	"ArrayList.h"
+
+1537481509 c:\users\dr.zero\desktop\mls4d\obra.h
+	"Funciones.h"
+	"ArrayList.h"
+
+1537481814 source:c:\users\dr.zero\desktop\mls4d\tarea.c
+	<stdio.h>
+	"Tarea.h"
+
+1537481978 source:c:\users\dr.zero\desktop\mls4d\obra.c
+	<stdio.h>
+	"Obra.h"
+	"Tarea.h"
+
