@@ -30,17 +30,20 @@ void calcularCostoTotal(ArrayList* ALtareas, ArrayList* ALobras)
     eObra* auxObras;
     int i;
     int j;
-    int acumulacion[50];
-    for(i=1;i<=ALobras->len();i++)
+    int acumulacion[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    for(i=1; i<ALobras->size; i++)
     {
         auxObras=al_get(ALobras,i);
-        for(j=1;j<=50;j++)
+        if(auxObras!=NULL)
         {
-           auxTareas=al_get(ALtareas,i);
-           if(auxObras->codigoDeTarea==auxTareas->codigoDeTarea)
-           {
-               acumulacion[j]+=(auxTareas->costoDiario)*auxObras->cantidadDeDias;
-           }
+            for(j=1; j<=50; j++)
+            {
+                auxTareas=al_get(ALtareas,j);
+                if(auxTareas!=NULL && auxObras->codigoDeTarea==auxTareas->codigoDeTarea)
+                {
+                    acumulacion[j]+=(auxTareas->costoDiario)*auxObras->cantidadDeDias;
+                }
+            }
         }
     }
     ordenarCostos(acumulacion);
@@ -50,27 +53,25 @@ void costoTotalPlanta(ArrayList* ALtareas, ArrayList* ALobras)
 {
     eTareas* auxTareas;
     eObra* auxObras;
-    int total;
+    int total = 0;
     int i;
     int j;
-    int acumulacion[51];
-    for(i=1;i<=ALobras->len();i++)
+    for(i=1; i<ALobras->size; i++)
     {
         auxObras=al_get(ALobras,i);
-        for(j=1;j<=50;j++)
+        if(auxObras!=NULL)
         {
-           auxTareas=al_get(ALtareas,i);
-           if(auxObras->codigoDeTarea==auxTareas->codigoDeTarea)
-           {
-               acumulacion[j]+=(auxTareas->costoDiario)*auxObras->cantidadDeDias;
-           }
+            for(j=1; j<=50; j++)
+            {
+                auxTareas=al_get(ALtareas,j);
+                if(auxTareas!=NULL && auxObras->codigoDeTarea==auxTareas->codigoDeTarea)
+                {
+                    total+=((auxTareas->costoDiario)*auxObras->cantidadDeDias);
+                }
+            }
         }
     }
-    for(j=1;j<=50;j++)
-    {
-        total += acumulacion[j];
-    }
-    printf("\nEl costo total del montaje de la planta es %d",total);
+    printf("\nEl costo total del montaje de la planta es $%d",total);
 }
 
 void ordenarCostos(int costos[])
@@ -78,7 +79,9 @@ void ordenarCostos(int costos[])
     int i;
     int j;
     int aux;
-    for(i=0;i<50;i++)
+    int auxIndice = 0;
+    int indices[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50};
+    for(i=1;i<50;i++)
     {
         for(j=i+1;j<=50;j++)
         {
@@ -87,11 +90,33 @@ void ordenarCostos(int costos[])
                 aux = costos[i];
                 costos[i] = costos[j];
                 costos[j] = aux;
+                auxIndice = indices[i];
+                indices[i] = indices[j];
+                indices[j] = auxIndice;
             }
         }
     }
-    for(i=0;i<50;i++)
+
+    for(i=1; i<50; i++)
     {
-        printf("\nNumero de tarea: %d\tCosto total de la tarea: $%d",i,costos[i]);
+        for(j=i+1; j<=50; j++)
+        {
+            if(costos[i] == costos[j])
+            {
+                if(indices[i]>indices[j])
+                {
+                    aux = costos[i];
+                    costos[i] = costos[j];
+                    costos[j] = aux;
+                    auxIndice = indices[i];
+                    indices[i] = indices[j];
+                    indices[j] = auxIndice;
+                }
+            }
+        }
+    }
+    for(i=1;i<=50;i++)
+    {
+        printf("\nNumero de tarea: %d\tCosto total de la tarea: $%d",indices[i],costos[i]);
     }
 }

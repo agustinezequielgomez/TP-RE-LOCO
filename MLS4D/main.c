@@ -37,13 +37,17 @@ int main()
             calcularCostoMinimo(listaTareas,listaObra);
             break;
         case 5:
+            contratistasMayorPlazo(listaObra);
             break;
         case 6:
             break;
         }
-        printf("\n");
-        system("pause");
-        system("cls");
+        if(opcion!=6)
+        {
+            printf("\n");
+            system("pause");
+            system("cls");
+        }
     }while(opcion!=6);
     return 0;
 }

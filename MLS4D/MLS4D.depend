@@ -47,3 +47,51 @@
 	"Obra.h"
 	"Tarea.h"
 
+1537809460 source:e:\tp-re-loco\mls4d\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1537806539 e:\tp-re-loco\mls4d\arraylist.h
+
+1537806539 source:e:\tp-re-loco\mls4d\contratista.c
+	<stdio.h>
+	"Contratista.h"
+
+1537806539 e:\tp-re-loco\mls4d\contratista.h
+	"Funciones.h"
+
+1537806539 e:\tp-re-loco\mls4d\funciones.h
+
+1537806539 source:e:\tp-re-loco\mls4d\funciones.c
+	<stdio.h>
+	"Funciones.h"
+	<ctype.h>
+
+1537820296 source:e:\tp-re-loco\mls4d\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Tarea.h"
+	"Obra.h"
+	"Contratista.h"
+
+1537819741 e:\tp-re-loco\mls4d\tarea.h
+	"Funciones.h"
+	"Obra.h"
+	"ArrayList.h"
+
+1537819986 e:\tp-re-loco\mls4d\obra.h
+	"Funciones.h"
+	"ArrayList.h"
+
+1537820008 source:e:\tp-re-loco\mls4d\obra.c
+	<stdio.h>
+	"Obra.h"
+	"Tarea.h"
+
+1537818319 source:e:\tp-re-loco\mls4d\tarea.c
+	<stdio.h>
+	"Tarea.h"
+

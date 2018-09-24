@@ -29,7 +29,7 @@ ArrayList* al_newArrayList(void)
         pElements = malloc(sizeof(void *)*AL_INITIAL_VALUE );
         if(pElements != NULL)
         {
-            this->size=0;
+            this->size=1;
             this->pElements=pElements;
             this->reservedSize=AL_INITIAL_VALUE;
             this->add=al_add;
